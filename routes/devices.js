@@ -18,7 +18,10 @@ router.post('/', async (req, res, next) => {
         //console.log(`@/devices [post] : req.body : ${JSON.stringify(req.body, null, 2)}`);
         var { updateValueList, disableRateLimit, saveDataLog, data } = req.body;
 
-        if (updateValueList == null || disableRateLimit == null || saveDataLog == null || data == null) {
+        if (disableRateLimit === null) {
+            disableRateLimit = false;
+        }
+        if (updateValueList == null || saveDataLog == null || data == null) {
             // throw new Error("Input field invalid !!! either due to invalid access to server or communication error");
             return res.json({ result: false, alert: "Input field invalid !!! either due to invalid access to server or communication error, try again after sometime or try contacting the admin!!!" });
         }
