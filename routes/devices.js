@@ -14,7 +14,7 @@ router.get('/', function (req, res, next) {
 
 router.post('/', async (req, res, next) => {
     try {
-        console.log(`@/devices [post] : req.body : ${JSON.stringify(req.body)}`);
+        //console.log(`@/devices [post] : req.body : ${JSON.stringify(req.body)}`);
         //console.log(`@/devices [post] : req.body : ${JSON.stringify(req.body, null, 2)}`);
         var { updateValueList, disableRateLimit, saveDataLog, data } = req.body;
 
@@ -88,7 +88,7 @@ router.post('/', async (req, res, next) => {
                     await predataLog.save();
                 }
 
-                console.log(`Response: ${JSON.stringify({ result: true, alert: "Successful!", data: currData }, null, 2)}`);
+                //console.log(`Response: ${JSON.stringify({ result: true, alert: "Successful!", data: currData }, null, 2)}`);
                 return res.json({ result: true, alert: "Successful!", data: currData });
 
                 //const devicePassword = predata.password;
