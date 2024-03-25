@@ -15,8 +15,11 @@ const app = express();
 
 dotenv.config();
 
+const allowedOrigins = process.env.ALLOWED_ORIGINS.split(',');
+console.log(`allowedOrigins: ${allowedOrigins}`);
 const corsOptions = {
-    origin: ['http://localhost:3000', 'http://localhost:5000'], // Allow requests from this origin
+    //origin: ['http://localhost:3000', 'http://localhost:5000'], // Allow requests from this origin
+    origin: allowedOrigins, // Allow requests from this origin
     credentials: true // Allow credentials
 };
 app.use(cors(corsOptions));
