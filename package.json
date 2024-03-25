@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "node ./bin/appRunner",
     "start2": "set PORT=6000 && node ./bin/www",
-    "swestart": "nodemon ./bin/www",
+    "swestart": "nodemon ./bin/appRunner",
     "swestart2": "nodemon app.js -p 6000",
     "swestart3": "nodemon ./bin/www -e js,html"
   },
