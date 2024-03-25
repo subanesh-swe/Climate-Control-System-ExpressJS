@@ -7,10 +7,10 @@
 ## Git ignore by subanesh
 
 # # temp
-/routes
-/public
-/views
-/models
+#/routes
+#/public
+#/views
+#/models
 
 ## unwanted files
 # /bin
@@ -19,6 +19,7 @@
 .vs
 .vscode
 *.njsproj
+*.config
 *.njsproj.user
 *.esproj
 *.esproj.user
