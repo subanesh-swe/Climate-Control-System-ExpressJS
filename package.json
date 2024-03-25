@@ -1,0 +1,25 @@
+{
+  "name": "climate-control-system-expressjs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "start2": "set PORT=6000 && node ./bin/www",
+    "swestart": "nodemon ./bin/www",
+    "swestart2": "nodemon app.js -p 6000",
+    "swestart3": "nodemon ./bin/www -e js,html"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^16.4.5",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "mongoose": "^8.2.3",
+    "morgan": "~1.9.1",
+    "nodemon": "^3.1.0",
+    "path": "^0.12.7",
+    "pug": "2.0.0-beta11"
+  }
+}
